@@ -97,9 +97,7 @@ basic.forever(function () {
 
 let right_speed = 0
 let left_speed = 0
-let steering_coefficient = 0
 let right = 0
-let threshold = 0
 let fwd = 0
 function showDirections() {
     if (fwd > 100) {
@@ -193,7 +191,6 @@ radio.onReceivedValue(function (item, value) {
 radio.setGroup(1)
 basic.forever(function () {
     showDirections()
-    threshold = 100
     if (fwd > 0) {
         left_speed = fwd + right
         right_speed = fwd - right
@@ -201,14 +198,7 @@ basic.forever(function () {
         left_speed = fwd + right
         right_speed = fwd - right
     }
-    if (Math.abs(left_speed) >= threshold) {
-        bitbot.motor(BBMotor.Left, left_speed)
-    } else {
-        bitbot.motor(BBMotor.Left, 0)
-    }
-    if (Math.abs(right_speed) >= threshold) {
-        bitbot.motor(BBMotor.Right, right_speed)
-    } else {
-        bitbot.motor(BBMotor.Right, 0)
-    }
+
+    bitbot.motor(BBMotor.Left, left_speed)
+    bitbot.motor(BBMotor.Right, right_speed)
 })

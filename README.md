@@ -8,14 +8,17 @@ AIM: Drive the car forwards using a button on the controller
 ### Controller
 
 - Need for different channels (groups)
-- Types of information to send (string, number, key-value pair)
 - Why it’s nice to have feedback from controller
 - Why do we need an else statement? What happens without it?
+
+![Exercise 1 - Controller](/1_controller.jpg)
 
 ### Car
 
 - Why should we specify a time? What happens without it? What happens when we change it?
 - BONUS: Can you make it do a wheelie?
+
+![Exercise 1 - Controller](/1_car.jpg)
 
 ## Exercise 2 - Forward/Backward Tilt
 

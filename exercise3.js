@@ -194,13 +194,12 @@ radio.setGroup(1)
 basic.forever(function () {
     showDirections()
     threshold = 100
-    steering_coefficient = 2
     if (fwd > 0) {
-        left_speed = fwd + right / steering_coefficient
-        right_speed = fwd - right / steering_coefficient
+        left_speed = fwd + right
+        right_speed = fwd - right
     } else {
-        left_speed = fwd + right / steering_coefficient
-        right_speed = fwd - right / steering_coefficient
+        left_speed = fwd + right
+        right_speed = fwd - right
     }
     if (Math.abs(left_speed) >= threshold) {
         bitbot.motor(BBMotor.Left, left_speed)

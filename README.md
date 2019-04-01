@@ -18,7 +18,7 @@ AIM: Drive the car forwards using a button on the controller
 - Why should we specify a time? What happens without it? What happens when we change it?
 - BONUS: Can you make it do a wheelie?
 
-![Exercise 1 - Controller](/1_car.jpg)
+![Exercise 1 - Car](/1_car.jpg)
 
 ## Exercise 2 - Forward/Backward Tilt
 
@@ -29,9 +29,13 @@ AIM: Drive the car forwards and backwards using the accelerometer in the control
 - Explain what an accelerometer is 
 - Use the simulation in the IDE to understand direction and magnitude of acceleration value
 
+![Exercise 2 - Controller](/2_controller.jpg)
+
 ### Car
 
 - What happens near zero when driving the car? How could we improve this?
+
+![Exercise 2 - Car](/2_car.jpg)
 
 ## Exercise 3 - All Directions Tilt!
 

@@ -1,5 +1,10 @@
-# bitBot_RC
-Building a RC car from BBC micro:bits and a bit:bot
+# BitBot RC
+Building a RC car from BBC micro:bits and a BitBot
+
+## Gotchas
+
+- Make sure to add the BitBot extension before you get started. In MakeCode go to Advanced > Extensions
+- Make sure to change the radio group value if you have multiple cars in a session
 
 ## Exercise 1 - Button Press
 
@@ -32,8 +37,6 @@ AIM: Drive the car forwards and backwards using the accelerometer in the control
 ![Exercise 2 - Controller](/2_controller.jpg)
 
 ### Car
-
-- What happens near zero when driving the car? How could we improve this?
 
 ![Exercise 2 - Car](/2_car.jpg)
 

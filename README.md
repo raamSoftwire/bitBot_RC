@@ -43,16 +43,19 @@ AIM: Drive the car in all directions using the accelerometer in the controller
 
 ### Controller
 
-- Explain what an accelerometer is 
-- Use the simulation in the IDE to understand direction and magnitude of acceleration value
+- Give them the `show_directions()` function, by pasting in the relevant JS code and swapping back to blocks. Explain that it is a tedious bit to code, but a cool thing to have
+![Exercise 3 - Controller](/3_controller.jpg)
 
 ### Car
 
-- Can this be rewritten using the BitBot motor functions rather than pins?
-- What is this like without the threshold?
-- Could we give them a fancy LED function too?
-- Steering coefficient is a nice to have, leave it out for now?
-- Maybe use forward and right, instead of left, as they are normal Cartesian values?
-- Swap sign values in the controller to be more intuitive and helpful during debugging
+- The values from the accelerometer are forward and right, but the motors on the BitBot are for the left and right wheels, so we have to do some maths to convert between these two systems
+- There are two cases, forwards and backwards. In the two cases, left and right are swapped. Drawing diagrams here helps to explain what you mean
 
-There are two cases, forwards and backwards. In the two cases, left and right are swapped. Maybe it’s easier to just do the forward case for now? Or don’t talk about the second, backward case and then let them find it out for themselves and discuss it and maybe fix it as a stretch goal.
+
+![Exercise 3 - Car](/3_car.jpg)
+
+## Stretch goals
+
+- Build in a threshold value (100 works well), so that small tilts don't have an effect which stops a lot of the juddering
+- The steering is very sensitive, as with a normal car you want the left/right controls to be more sensitive than the forward/backward movements. This can be done by dividing the left/right values through by a constant (2 works well)
+- Could you use the 12 LEDs on the BitBot to do something cool? 

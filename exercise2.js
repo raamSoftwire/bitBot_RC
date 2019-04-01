@@ -2,7 +2,7 @@
 
 radio.setGroup(1)
 basic.forever(function () {
-    radio.sendNumber(0 - input.acceleration(Dimension.Y))
+    radio.sendValue("fwd", 0 - input.acceleration(Dimension.Y))
     if (input.acceleration(Dimension.Y) < 0) {
         basic.showLeds(`
             . . # . .
@@ -25,7 +25,10 @@ basic.forever(function () {
 
 // Car
 
-radio.onReceivedNumber(function (receivedNumber) {
-    bitbot.drive(receivedNumber)
+radio.onReceivedValue(function (item, value) {
+    if (item.compare("fwd") == 0) {
+        bitbot.drive(value)
+    }
 })
+
 radio.setGroup(1)

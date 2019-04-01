@@ -3,7 +3,7 @@
 radio.setGroup(1)
 basic.forever(function () {
     if (input.buttonIsPressed(Button.A)) {
-        radio.sendString("go")
+        radio.sendValue("fwd", "true")
         basic.showLeds(`
             . . # . .
             . # # # .
@@ -25,9 +25,12 @@ basic.forever(function () {
 
 // Car
 
-radio.onReceivedString(function (receivedString) {
-    bitbot.driveMilliseconds(600, 400)
+radio.onReceivedValue(function (item, value) {
+    if (item.compare("fwd") == 0) {
+        bitbot.driveMilliseconds(600, 400)
+    }
 })
+
 radio.setGroup(1)
 basic.forever(function () {
 
